@@ -3,12 +3,16 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Usable
+  - pcCam
+  - pcArea
+  - doorArea
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Usable
   - Water
   - UI
   - 
