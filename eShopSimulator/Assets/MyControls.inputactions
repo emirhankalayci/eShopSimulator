@@ -1,0 +1,34 @@
+{
+    "name": "MyControls",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "d4530d25-920b-400e-a906-f8e3bcf0105f",
+            "actions": [
+                {
+                    "name": "Use",
+                    "type": "Button",
+                    "id": "9b92ac8c-aaa0-45eb-bd92-004783ef8e52",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "4c743400-e791-487e-8b0a-8e46d02a5e4e",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Use",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

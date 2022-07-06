@@ -8,6 +8,7 @@ TagManager:
   - pcCam
   - pcArea
   - doorArea
+  - pcArea2
   layers:
   - Default
   - TransparentFX
