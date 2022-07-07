@@ -151,12 +151,12 @@ public class FirstPersonController : MonoBehaviour
 
     void Start()
     {
-        if(lockCursor)
+        if(lockCursor == true)
         {
             Cursor.lockState = CursorLockMode.Locked;
         }
 
-        if(crosshair)
+        if(crosshair == true)
         {
             crosshairObject.sprite = crosshairImage;
             crosshairObject.color = crosshairColor;

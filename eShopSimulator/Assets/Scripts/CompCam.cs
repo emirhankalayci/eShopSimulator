@@ -7,7 +7,13 @@ public class CompCam : MonoBehaviour
     public GameObject instruction1;
     public GameObject instruction2;
     public GameObject pcCam;
+    public bool openable = false;
+    private FirstPersonController firstPersonController;
 
+    public void Awake()
+    {
+        firstPersonController = GetComponent<FirstPersonController>();
+    }
     private void OnTriggerStay(Collider other)
     {
         if (other.tag == "pcArea")
@@ -15,9 +21,12 @@ public class CompCam : MonoBehaviour
             instruction1.SetActive(true);     
             
             if (Input.GetKeyDown(KeyCode.E))
-            {
-                //instruction1.SetActive(false);
-                transform.position = new Vector3(77.241f, 2.881f, 16.843f);               
+            {                
+                transform.position = new Vector3(77.241f, 2.881f, 16.843f);
+                openable = true;
+
+                firstPersonController.playerCanMove = false;
+                firstPersonController.cameraCanMove = false;
             }                             
         }
 
@@ -31,8 +40,11 @@ public class CompCam : MonoBehaviour
                 transform.position = new Vector3(75.301f, 2.881f, 16.932f);
                 pcCam.SetActive(false);
                 instruction2.SetActive(false);
+
+                firstPersonController.playerCanMove = true;
+                firstPersonController.cameraCanMove = true;
             }
-                
+
         }
     }
 

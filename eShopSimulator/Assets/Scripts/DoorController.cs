@@ -5,13 +5,20 @@ using UnityEngine;
 public class DoorController : MonoBehaviour
 {
     public GameObject instructions;
+    private CompCam compCam;
+
+
+    private void Awake()
+    {
+        compCam = GetComponent<CompCam>();       
+    }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "doorArea")
+        if (other.tag == "doorArea" && compCam.openable == true)
         {
             instructions.SetActive(true);        
-            Animator anim = other.GetComponentInChildren<Animator>();          
+            Animator anim = other.GetComponentInChildren<Animator>();             
             if (Input.GetKeyDown(KeyCode.E))
                 anim.SetTrigger("OpenClose"); 
         }
