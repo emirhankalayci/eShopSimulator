@@ -16,7 +16,7 @@ public class ChangeCursor : MonoBehaviour
     void Start()
     {
         //Cursor.visible = false;
-        Cursor.SetCursor(cursorArrow, Vector2.zero, CursorMode.ForceSoftware);
+        //Cursor.SetCursor(cursorArrow, Vector2.zero, CursorMode.ForceSoftware);
         firstPersonController.lockCursor = false;
         firstPersonController.crosshair = false;
         firstPersonController.enableZoom = false;
@@ -29,12 +29,12 @@ public class ChangeCursor : MonoBehaviour
     }
     void OnMouseEnter()
     {    
-        Cursor.SetCursor(cursorOnMonitor, Vector2.zero, CursorMode.ForceSoftware);
+        //Cursor.SetCursor(cursorOnMonitor, Vector2.zero, CursorMode.ForceSoftware);
     }
 
     void OnMouseExit()
     {
-        Cursor.SetCursor(cursorArrow, Vector2.zero, CursorMode.ForceSoftware);
+        //Cursor.SetCursor(cursorArrow, Vector2.zero, CursorMode.ForceSoftware);
     }
 
 }
